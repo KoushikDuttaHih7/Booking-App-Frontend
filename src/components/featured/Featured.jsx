@@ -1,9 +1,9 @@
 import useFetch from "../../hooks/useFetch";
 import "./featured.css";
-import countByCity from "../../apis/api";
+import { countByCity } from "../../apis/api";
 
 const Featured = () => {
-  const { data, loading, error } = useFetch(countByCity);
+  const { data, loading } = useFetch(countByCity);
   // console.log(data);
 
   return (
