@@ -1,9 +1,9 @@
-import { getAllwithQuery } from "../../apis/api";
+import { getAllinFeaturedProperties } from "../../apis/api";
 import useFetch from "../../hooks/useFetch";
 import "./featuredProperties.css";
 
 const FeaturedProperties = () => {
-  const { data, loading } = useFetch(getAllwithQuery);
+  const { data, loading } = useFetch(getAllinFeaturedProperties);
 
   return (
     <div className='fp'>
