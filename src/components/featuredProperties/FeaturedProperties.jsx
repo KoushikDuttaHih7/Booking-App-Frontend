@@ -1,9 +1,10 @@
-import { getAllinFeaturedProperties } from "../../apis/api";
+import { hotel_API } from "../../apis/api";
 import useFetch from "../../hooks/useFetch";
 import "./featuredProperties.css";
 
 const FeaturedProperties = () => {
-  const { data, loading } = useFetch(getAllinFeaturedProperties);
+  const { data, loading } = useFetch(hotel_API + `?featured=true&limit=4`);
+  // console.log(data);
 
   return (
     <div className='fp'>

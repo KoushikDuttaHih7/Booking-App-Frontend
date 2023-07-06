@@ -1,9 +1,11 @@
 import useFetch from "../../hooks/useFetch";
 import "./featured.css";
-import { countByCity } from "../../apis/api";
+import { hotel_API } from "../../apis/api";
 
 const Featured = () => {
-  const { data, loading } = useFetch(countByCity);
+  const { data, loading } = useFetch(
+    hotel_API + `/countByCity?cities=berlin,madrid,london`
+  );
   // console.log(data);
 
   return (
